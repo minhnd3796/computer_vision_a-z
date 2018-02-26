@@ -20,7 +20,6 @@ video_capture = cv2.VideoCapture(0) # We turn the webcam on.
 
 while True: # We repeat infinitely (until break):
     _, frame = video_capture.read() # We get the last frame.
-    print(type(frame))
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) # We do some colour transformations.
     
     canvas = detect(gray, frame) # We get the output of our detect function.
